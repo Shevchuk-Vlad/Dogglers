@@ -21,25 +21,25 @@ public final class VerticalHorizontalListItemBinding implements ViewBinding {
   private final MaterialCardView rootView;
 
   @NonNull
-  public final TextView dogAge;
+  public final ImageView dogPicture;
 
   @NonNull
-  public final TextView dogHobby;
+  public final TextView dogsAge;
 
   @NonNull
-  public final ImageView dogImage;
+  public final TextView dogsHobby;
 
   @NonNull
-  public final TextView dogName;
+  public final TextView dogsName;
 
   private VerticalHorizontalListItemBinding(@NonNull MaterialCardView rootView,
-      @NonNull TextView dogAge, @NonNull TextView dogHobby, @NonNull ImageView dogImage,
-      @NonNull TextView dogName) {
+      @NonNull ImageView dogPicture, @NonNull TextView dogsAge, @NonNull TextView dogsHobby,
+      @NonNull TextView dogsName) {
     this.rootView = rootView;
-    this.dogAge = dogAge;
-    this.dogHobby = dogHobby;
-    this.dogImage = dogImage;
-    this.dogName = dogName;
+    this.dogPicture = dogPicture;
+    this.dogsAge = dogsAge;
+    this.dogsHobby = dogsHobby;
+    this.dogsName = dogsName;
   }
 
   @Override
@@ -69,32 +69,32 @@ public final class VerticalHorizontalListItemBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.dog_age;
-      TextView dogAge = ViewBindings.findChildViewById(rootView, id);
-      if (dogAge == null) {
+      id = R.id.dog_picture;
+      ImageView dogPicture = ViewBindings.findChildViewById(rootView, id);
+      if (dogPicture == null) {
         break missingId;
       }
 
-      id = R.id.dog_hobby;
-      TextView dogHobby = ViewBindings.findChildViewById(rootView, id);
-      if (dogHobby == null) {
+      id = R.id.dogs_age;
+      TextView dogsAge = ViewBindings.findChildViewById(rootView, id);
+      if (dogsAge == null) {
         break missingId;
       }
 
-      id = R.id.dog_image;
-      ImageView dogImage = ViewBindings.findChildViewById(rootView, id);
-      if (dogImage == null) {
+      id = R.id.dogs_hobby;
+      TextView dogsHobby = ViewBindings.findChildViewById(rootView, id);
+      if (dogsHobby == null) {
         break missingId;
       }
 
-      id = R.id.dog_name;
-      TextView dogName = ViewBindings.findChildViewById(rootView, id);
-      if (dogName == null) {
+      id = R.id.dogs_name;
+      TextView dogsName = ViewBindings.findChildViewById(rootView, id);
+      if (dogsName == null) {
         break missingId;
       }
 
-      return new VerticalHorizontalListItemBinding((MaterialCardView) rootView, dogAge, dogHobby,
-          dogImage, dogName);
+      return new VerticalHorizontalListItemBinding((MaterialCardView) rootView, dogPicture, dogsAge,
+          dogsHobby, dogsName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
